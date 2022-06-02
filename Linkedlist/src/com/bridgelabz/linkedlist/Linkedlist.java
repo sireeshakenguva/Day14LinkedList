@@ -25,9 +25,15 @@ public class Linkedlist {
         Node newNode = new Node(data);
         newNode.next = previousNode.next;
         previousNode.next = newNode;
-
     }
-
+    public void pop(){
+        if(head==null){
+            System.out.println("List is Empty and Can't be delete");
+        }
+        System.out.println("Deleting the first element");
+        head=head.next;
+    }
+        
     public void display() {
         Node current = head;
         if (head == null) {
